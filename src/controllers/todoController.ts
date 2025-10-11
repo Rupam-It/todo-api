@@ -13,3 +13,12 @@ try{
 }
 }
 
+
+export const getTodo = async (req: Request, res: Response) => {
+    try {
+      const todos = await Todo.find(); // fetch all todos
+      res.status(200).json(todos);     // send them as JSON
+    } catch (error) {
+      res.status(500).json({ message: "Error fetching todos", error });
+    }
+  };
