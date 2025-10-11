@@ -1,5 +1,5 @@
 import { Request , Response} from "express";
-import  Todo  from "../models/todoModel.js";
+import  Todo  from "../models/todoModel";
 
 
 export const addTodo= async (req:Request, res: Response)=>{
@@ -12,3 +12,4 @@ try{
     res.status(500).json({ message: "Error adding todo", error });
 }
 }
+

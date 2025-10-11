@@ -7,7 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "esModuleInterop": true,
+    "module": "commonjs",
     "target": "esnext",
     "types": [],
     // For nodejs:
@@ -33,6 +34,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
+    // "allowImportingTsExtensions": true,
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
