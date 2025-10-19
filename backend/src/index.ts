@@ -9,7 +9,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use("/todos", todoRoutes);
 
-mongoose.connect("mongodb://admin:password123@localhost:27017/todo_db")
+mongoose.connect("mongodb://admin:password123@localhost:27017/todo_db?authSource=admin")
   .then(() => {
     console.log(" Connected to MongoDB");
     app.listen(PORT, () => console.log(`Server running on ${PORT}`));
